@@ -2,6 +2,7 @@ package org.example;
 
 
 import java.util.LinkedList;
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class Main {
         if (input == null) {
             return false;
         }
-        String cleaned = input.toLowerCase();
+        String cleaned = input.toLowerCase(Locale.ENGLISH);
         cleaned = cleaned.replaceAll("[^a-z0-9]", "");
 
         String reversed = new StringBuilder(cleaned).reverse().toString();
